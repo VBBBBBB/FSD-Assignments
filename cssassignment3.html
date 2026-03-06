@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio - Step 3</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #f5f7fa;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR – FLEXBOX */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #1f2933;
+        }
+
+        .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        #name {
+            text-align: center;
+            color: #1f2933;
+            margin-top: 40px;
+        }
+
+        .role {
+            text-align: center;
+            color: #3b82f6;
+            font-size: 18px;
+        }
+
+        .about-card {
+            width: 350px;
+            background-color: white;
+            padding: 25px;
+            margin: 30px auto;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .about-card h2 {
+            margin-bottom: 10px;
+        }
+
+        .about-card p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">MyPortfolio</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <h1 id="name">Vishwajeet</h1>
+    <div class="role">Aspiring Full Stack & AI Developer</div>
+
+    <div class="about-card">
+        <h2>About Me</h2>
+        <p>
+            Focused on backend development, AI integration,
+            and building scalable applications with clean architecture.
+        </p>
+    </div>
+
+</body>
+</html>

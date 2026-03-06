@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Journey - Find Restaurants</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+            <nav>
+                <ul class="navbar-list">
+                    <li><a href="#hero" class="navbar-link">Search</a></li>
+                    <li><a href="restaurants.html" class="navbar-link">Restaurants</a></li>
+                    <li><a href="#categories" class="navbar-link">Cuisines</a></li>
+                    <li><a href="#" class="navbar-link">Cities</a></li>
+                </ul>
+            </nav>
+
+            <div class="navbar-right">
+                <a href="#" class="navbar-link">Login/Sign Up</a>
+            </div>
+
+            <div class="menu-toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">DISCOVER YOUR NEXT<br>CULINARY JOURNEY</h1>
+
+                <div class="search-wrapper">
+                    <div class="search-container">
+                        <input type="text" class="search-input"
+                            placeholder="Search by Restaurant, Cuisine, or Location">
+                        <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                    </div>
+                    <div style="width: 100%; max-width: 700px; text-align: left;">
+                        <button class="hero-btn">SEARCH</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <div class="category-grid">
+
+                    <!-- Asian Fusion -->
+                    <div class="category-card card-asian">
+                        <div class="category-icon">
+                            <ion-icon name="fish-outline"></ion-icon> <!-- Placeholder for Sushi -->
+                        </div>
+                        <h3 class="category-title">Asian<br>Fusion</h3>
+                    </div>
+
+                    <!-- Italian Classics -->
+                    <div class="category-card card-italian">
+                        <div class="category-icon">
+                            <ion-icon name="pizza-outline"></ion-icon>
+                        </div>
+                        <h3 class="category-title">Italian<br>Classics</h3>
+                    </div>
+
+                    <!-- Mexican Flavors -->
+                    <div class="category-card card-mexican">
+                        <div class="category-icon">
+                            <ion-icon name="restaurant-outline"></ion-icon> <!-- Placeholder for Taco -->
+                        </div>
+                        <h3 class="category-title">Mexican<br>Flavors</h3>
+                    </div>
+
+                    <!-- Cafes & Bistros -->
+                    <div class="category-card card-bistros">
+                        <div class="category-icon">
+                            <ion-icon name="cafe-outline"></ion-icon>
+                        </div>
+                        <h3 class="category-title">Cafés &<br>Bistros</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="social-links">
+                <a href="#" class="social-icon"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#" class="social-icon"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#" class="social-icon"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#" class="social-icon"><ion-icon name="logo-twitter"></ion-icon></a> <!-- Bird icon -->
+            </div>
+
+            <div class="footer-nav">
+                <a href="#" class="footer-link">ABOUT US</a>
+                <a href="#" class="footer-link">CONTACT</a>
+                <a href="#" class="footer-link">PRIVACY POLICY</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

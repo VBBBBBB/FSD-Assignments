@@ -1,0 +1,44 @@
+<%- include('./partials/header', {title: 'Student Directory' }) %>
+
+    <div class="page-header">
+        <h2>Student Directory</h2>
+        <p>Browse our current scholars.</p>
+    </div>
+
+    <div class="table-container">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (students.length> 0) { %>
+                    <% students.forEach(student=> { %>
+                        <tr>
+                            <td>
+                                <%= student.name %>
+                            </td>
+                            <td>
+                                <%= student.course %>
+                            </td>
+                            <td>Year <%= student.year %>
+                            </td>
+                        </tr>
+                        <% }) %>
+                            <% } else { %>
+                                <tr>
+                                    <td colspan="3" class="text-center">No students enrolled yet.</td>
+                                </tr>
+                                <% } %>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="actions center-actions">
+        <a href="/add-student" class="btn-primary">+ Add New Student</a>
+    </div>
+
+    <%- include('./partials/footer') %>

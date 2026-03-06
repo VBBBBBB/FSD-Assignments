@@ -1,0 +1,38 @@
+<%- include('./partials/header', {title: 'Contact' }) %>
+
+    <div class="contact-section">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you. Reach out to our admissions team for any queries regarding enrollment,
+                courses, or campus life.</p>
+
+            <ul class="contact-details">
+                <li>📍 123 University Avenue, Knowledge City</li>
+                <li>📞 +1 (555) 123-4567</li>
+                <li>✉️ admissions@universitycollege.edu</li>
+            </ul>
+        </div>
+
+        <div class="form-container contact-form">
+            <form action="#" method="GET" class="auth-form">
+                <div class="input-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Jane Doe" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="jane.doe@example.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="How can we help you?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary full-width">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <%- include('./partials/footer') %>

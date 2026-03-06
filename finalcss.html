@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Assignments Demo</title>
+
+<style>
+/* =========================
+   ASSIGNMENT 1 – BASIC
+========================= */
+body {
+  background-color: #f4f6fb;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #333;
+}
+
+#main-heading {
+  text-align: center;
+  color: #4b5cff;
+  margin-top: 20px;
+}
+
+.text {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   ASSIGNMENT 3 – FLEXBOX
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #4b5cff;
+  color: white;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   ASSIGNMENT 2 – BOX MODEL
+========================= */
+.card {
+  width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  background-color: white;
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   ASSIGNMENT 4 – GRID
+========================= */
+.gallery {
+  width: 90%;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.gallery div {
+  height: 120px;
+  background-color: #c7ccff;
+  border-radius: 8px;
+}
+
+/* =========================
+   ASSIGNMENT 6 – ANIMATION
+========================= */
+.animated-btn {
+  display: inline-block;
+  margin: 40px auto;
+  padding: 14px 28px;
+  background-color: #4b5cff;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.animated-btn:hover {
+  background-color: #2f3fff;
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(75,92,255,0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(75,92,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(75,92,255,0); }
+}
+
+/* =========================
+   ASSIGNMENT 5 – RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- FLEXBOX NAVBAR -->
+<nav class="navbar">
+  <div class="logo">MyWebsite</div>
+  <div class="menu">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+<!-- BASIC STYLING -->
+<h1 id="main-heading">CSS Assignments Webpage</h1>
+<p class="text">This page demonstrates all required CSS concepts.</p>
+
+<!-- BOX MODEL CARD -->
+<div class="card">
+  <h2>Card Component</h2>
+  <p>This card uses width, padding, margin, border, and shadow.</p>
+</div>
+
+<!-- GRID GALLERY -->
+<div class="gallery">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<!-- ANIMATED BUTTON -->
+<center>
+  <a href="#" class="animated-btn">Hover Me</a>
+</center>
+
+</body>
+</html>

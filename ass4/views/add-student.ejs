@@ -1,0 +1,34 @@
+<%- include('./partials/header', {title: 'Admissions' }) %>
+
+    <div class="form-container">
+        <h2>Student Registration</h2>
+        <p>Admit a new student to University College.</p>
+
+        <form action="/add-student" method="POST" class="auth-form">
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe">
+            </div>
+
+            <div class="input-group">
+                <label for="course">Course</label>
+                <select id="course" name="course" required>
+                    <option value="" disabled selected>Select a course...</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Business Administration">Business Administration</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Arts and Humanities">Arts and Humanities</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="year">Academic Year</label>
+                <input type="number" id="year" name="year" required min="1" max="5" placeholder="1">
+            </div>
+
+            <button type="submit" class="btn-primary full-width">Register Student</button>
+        </form>
+    </div>
+
+    <%- include('./partials/footer') %>

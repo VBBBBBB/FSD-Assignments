@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio - Step 4</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #f5f7fa;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR – FLEXBOX */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #1f2933;
+        }
+
+        .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* HERO TEXT */
+        #name {
+            text-align: center;
+            color: #1f2933;
+            margin-top: 40px;
+        }
+
+        .role {
+            text-align: center;
+            color: #3b82f6;
+            font-size: 18px;
+        }
+
+        /* ABOUT CARD – BOX MODEL */
+        .about-card {
+            width: 360px;
+            background-color: white;
+            padding: 25px;
+            margin: 30px auto;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .about-card p {
+            color: #555;
+        }
+
+        /* PROJECTS SECTION */
+        .projects-section {
+            padding: 40px;
+        }
+
+        .projects-title {
+            text-align: center;
+            color: #1f2933;
+            margin-bottom: 30px;
+        }
+
+        /* GRID */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">MyPortfolio</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <h1 id="name">Vishwajeet</h1>
+    <div class="role">Aspiring Full Stack & AI Developer</div>
+
+    <!-- ABOUT -->
+    <div class="about-card">
+        <h2>About Me</h2>
+        <p>
+            I focus on backend development, AI-powered applications,
+            and secure system design with real-world impact.
+        </p>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="projects-section">
+        <h2 class="projects-title">Projects</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>QuizMaster</h3>
+                <p>AI-based quiz generation platform for teachers and students.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Phishing Detection</h3>
+                <p>Detects phishing emails using Generative AI techniques.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Blockchain Supply Chain</h3>
+                <p>Secure food and drug tracking using blockchain.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

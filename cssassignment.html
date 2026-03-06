@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Animated Web Page</title>
+
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  animation: fadeIn 1.2s ease;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  animation: slideDown 1s ease;
+}
+
+header p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* CARD GRID */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.card {
+  padding: 25px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.18);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: floatUp 1s ease forwards;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  background: white;
+  color: #764ba2;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #f1f1f1;
+  transform: scale(1.05);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .container {
+    padding: 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <header>
+    <h1>Beautiful Web Page</h1>
+    <p>Responsive • Animated • Pure HTML & CSS</p>
+  </header>
+
+  <section class="cards">
+    <div class="card">
+      <h2>Clean Design</h2>
+      <p>Modern glassmorphism style with smooth transitions.</p>
+    </div>
+
+    <div class="card">
+      <h2>Responsive</h2>
+      <p>Looks great on mobile, tablet, and desktop.</p>
+    </div>
+
+    <div class="card">
+      <h2>Animations</h2>
+      <p>Subtle animations for a premium feel.</p>
+    </div>
+
+    <div class="card">
+      <h2>No JavaScript</h2>
+      <p>Everything built using pure HTML and CSS.</p>
+    </div>
+  </section>
+
+  <center>
+    <a href="#" class="btn">Get Started</a>
+  </center>
+</div>
+
+</body>
+</html>

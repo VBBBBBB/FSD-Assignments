@@ -1,0 +1,46 @@
+<%- include('partials/header') %>
+
+<main style="padding-top: 100px;">
+    <section>
+        <div class="booking-container" style="max-width: 500px;">
+            <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 2.5rem;">Join Azure Horizon</h2>
+            
+            <% if (error) { %>
+                <div style="background: rgba(245, 87, 108, 0.1); border: 1px solid var(--accent-alt); color: var(--accent-alt); padding: 1rem; border-radius: 12px; margin-bottom: 2rem; font-size: 0.9rem; text-align: center;">
+                    <i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i> <%= error %>
+                </div>
+            <% } %>
+
+            <form action="/register" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Pick a unique handle">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="your.name@domain.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Choose a strong password">
+                </div>
+                
+                <div class="form-group">
+                    <label for="role">Register As</label>
+                    <select id="role" name="role" style="width: 100%; padding: 1.25rem; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--glass-border); border-radius: 16px; color: #fff; font-size: 1rem; outline: none; transition: all 0.3s; cursor: pointer; -webkit-appearance: none;">
+                        <option value="customer" style="background: var(--bg-dark);">Customer</option>
+                        <option value="admin" style="background: var(--bg-dark);">Agent / Admin</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn" style="margin-top: 1.5rem;">Create Account <i class="fas fa-id-card" style="margin-left: 10px;"></i></button>
+            </form>
+
+            <div style="margin-top: 2rem; text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+                Already a member? <a href="/login" style="color: var(--primary); font-weight: 600;">Sign In</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<%- include('partials/footer') %>

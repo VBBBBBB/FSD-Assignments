@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+    <main style="padding-top: 100px;">
+        <section>
+            <h2 class="section-title">All Our Destinations</h2>
+            <div class="grid">
+                <% destinations.forEach(item=> { %>
+                    <div class="card">
+                        <div class="card-img-container">
+                            <img src="<%= item.image %>" alt="<%= item.name %>">
+                            <span class="card-tag"><i class="fas fa-map-marker-alt"></i> <%= item.location %></span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title"><%= item.name %></h3>
+                            <p class="card-desc"><%= item.description %></p>
+                            <div class="card-footer">
+                                <div class="card-price">$<%= item.price %> <span>/ person</span></div>
+                                <a href="/book/<%= item._id %>" class="card-btn">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>

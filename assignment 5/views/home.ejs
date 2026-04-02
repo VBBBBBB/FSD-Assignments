@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+
+    <main>
+        <section class="hero">
+            <h1>Discover <br><span class="logo">Perfect</span> Horizons</h1>
+            <p>Curated luxury travels designed for those who seek the extraordinary. From royal palaces to serene waters, your next story starts here.</p>
+            <a href="/destinations" class="cta-button">Explore Destinations</a>
+        </section>
+
+        <section>
+            <h2 class="section-title">Featured Escapes</h2>
+            <div class="grid">
+                <% featured.forEach(item=> { %>
+                    <div class="card">
+                        <div class="card-img-container">
+                            <img src="<%= item.image %>" alt="<%= item.name %>">
+                            <span class="card-tag">Featured</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title"><%= item.name %></h3>
+                            <p class="card-desc"><%= item.description %></p>
+                            <div class="card-footer">
+                                <div class="card-price">$<%= item.price %> <span>/ person</span></div>
+                                <a href="/book/<%= item._id %>" class="card-btn">View Deal</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
